@@ -9,7 +9,7 @@ def sisesta_andmed(i, p):
         inimene = input("Введите имя: ")
         i.append(inimene)
         palk=int(input("Введите зарплату: "))
-        p.append(palk)
+        p.append(palk )
     return i,p
 def andmed_ekranile(i, p):
     """Показать список людей и зарплат
@@ -73,3 +73,17 @@ def koik_del(i, p):
         print("Выход")
     else:
         ValueError
+def modulizm(i, p):
+    """Проверяет есть ли пользователь по поиску имени в списке
+    """
+    imya=str(input("Введите имя человека которого хотите найти в списке"))
+    if imya in (inimesed):
+        print (imya)
+    elif imya not in (inimesed):
+        vvod=int(input("Данного имени нет в списке, хотите добавить юзера?\n1-Da\n2-Net"))
+        if vvod == 1:
+            sisesta_andmed(i, p)
+        elif vvod == 2:
+            return
+        else:
+            ValueError
